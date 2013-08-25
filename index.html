@@ -29,7 +29,7 @@
     (function() {
       if (window.innerWidth>548) { // Add && Modernizr.localstorage and cache font
         var config = {
-          kitId: 'XXXXX',
+          kitId: 'ieo6bzw',
           scriptTimeout: 3000
         };
         var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
@@ -41,11 +41,115 @@
 
 <body class="focus">
 
-      <nav role="navigation" id="nav" class="main-nav l-fl">
-        <p><a href="level.html">level.html</a></p>
-        <p><a href="level-select.html">level-select.html</a></p>
+  <header role="banner" id="header" class="l-tac">
+    <h1 class="main-header">Furious Focus</h1>
+  </header>
+
+
+  <main role="main" id="main" class="main level-select l-tac">
+
+    <div class="level-easy" id="easy">
+
+      <h2 class="level-header">Easy</h2>
+
+      <nav id="level-nav-easy" class="level-nav">
+        <ul class="no-mp clearfix">
+          <li class="level">
+            <a href="level-sat.html" class="level-link">
+              <img src="http://placeimg.com/200/200/people?rand=1" /><br />
+              <h3 class="level-name">Sat</h3>
+            </a>
+          </li>
+          <li class="level">
+            <a href="level-noi.html" class="level-link">
+              <img src="http://placeimg.com/200/200/people?rand=2" /><br />
+              <h3 class="level-name">Noi</h3>
+            </a>
+          </li>
+          <li class="level">
+            <a href="level-blu.html" class="level-link">
+              <img src="http://placeimg.com/200/200/people?rand=3" /><br />
+              <h3 class="level-name">Blu</h3>
+            </a>
+          </li>
+        </ul>
       </nav>
 
+    </div>
+
+    <div class="level-medium" id="medium">
+
+      <h2 class="level-header">Medium</h2>
+
+      <nav id="level-nav-medium" class="level-nav">
+        <ul class="no-mp clearfix">
+          <li class="level">
+            <a href="level-satnoi.html" class="level-link">
+              <img src="http://placeimg.com/200/200/people?rand=4" /><br />
+              <h3 class="level-name">Satnoi</h3>
+            </a>
+          </li>
+          <li class="level">
+            <a href="level-satblu.html" class="level-link">
+              <img src="http://placeimg.com/200/200/people?rand=5" /><br />
+              <h3 class="level-name">Satblu</h3>
+            </a>
+          </li>
+          <li class="level">
+            <a href="level-noiblu.html" class="level-link">
+              <img src="http://placeimg.com/200/200/people?rand=6" /><br />
+              <h3 class="level-name">Noiblu</h3>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="level-hard" id="hard">
+
+      <h2 class="level-header">Hard</h2>
+
+      <nav id="level-nav-hard" class="level-nav">
+        <ul class="no-mp clearfix">
+          <li class="level">
+            <a href="level-satnoiblu.html" class="level-link">
+              <img src="http://placeimg.com/200/200/people?rand=7" /><br />
+              <h3 class="level-name">Satnoiblu</h3>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+
+
+
+  </main>
+
+  <footer role="contentinfo" id="footer" class="l-cb footer">
+    <p>Made by Andrew Higson-Smith of <a href="http://www.elementalsystems.co.za/">Elemental Systems</a> and Steve Barnett of <a href="http://naga.co.za/">Naga</a> for <a href="http://www.ludumdare.com/">Ludum Dare</a> 27: 10 Seconds.</p>
+  </footer>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- scripts concatenated and minified via build script -->
+  <!-- consider use of async or defer attributes -->
+  <script defer src="js/main.js"></script>
+  <!-- end scripts -->
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-24142825-7', 'stevebarnett.github.io');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
