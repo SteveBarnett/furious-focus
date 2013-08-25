@@ -44,7 +44,15 @@ function showGameOver()
    var sel=(Math.random()*messages.length)|0;
    for (var i=0;i<messages.length;i+=1) {
      messages[i].classList.remove('l-dn');
-	 if (i!=sel)
+	 if ((i!=sel)||(score<2))
+	   messages[i].classList.add('l-dn');	 
+   }
+   
+   messages=document.querySelectorAll(".unpliment");
+   sel=(Math.random()*messages.length)|0;
+   for (var i=0;i<messages.length;i+=1) {
+     messages[i].classList.remove('l-dn');
+	 if ((i!=sel)||(score>=2))
 	   messages[i].classList.add('l-dn');	 
    }
    
@@ -84,13 +92,13 @@ function doSetUp(timeStamp)
 	  id.classList.remove("l-dn");
 	  id.classList.add(controls[i].displayClass);
 	  
-	  var tLev=((Math.random()*5)|0)*.25;      
+	  var tLev=((Math.random()*3)|0)*.5;      
 	  controls[i].targetLevel=tLev;
 	  controls[i].level=tLev;
 	  controls[i].draw();
 	  var sLev;
 	  while (true) {
-	    sLev=((Math.random()*5)|0)*.25;
+	    sLev=((Math.random()*3)|0)*.5;
 		if (sLev!=tLev) break;
 	  } 
 	  controls[i].level=sLev;
@@ -98,6 +106,11 @@ function doSetUp(timeStamp)
 	targetImage=transformImage(etCanvas,makeSplit);	
 		
 	drawContext = gameCanvas.getContext('2d');				
+	
+	//uncheck all radios
+	var radios=document.querySelectorAll('.filter-radio');
+	for (var i=0;i<radios.length;i+=1)
+	  radios[i].checked=false;
 	
 }
 
@@ -140,23 +153,17 @@ function play() {
    startSetUp();
  } 
  
- function GameLoop(timeStamp) {
+ function GameLoop() {
 	  //Calculate our frametime
-	  var frameTime=timeStamp-lastTimeStamp;
-	  frameTime=100;
 	  if (lastTimeStamp==0) {
-	    frameTime=0;	  
 	    document.querySelector(".level-loading").classList.add("l-dn");
 		//window.requestAnimationFrame(GameLoop);			  
 		window.setTimeout(GameLoop,100);
 		lastTimeStamp=1;
 		return;      
 	  }
-	  if (lastTimeStamp==1) 
-	    frameTime=0;	  
 	  
-	  timeLeft-=frameTime;
-	  lastTimeStamp=timeStamp;	  
+	  timeLeft-=100;
 	  llMessage="";
 	  if (checkBoardMatch()) {
 	    score+=1;
@@ -172,6 +179,5 @@ function play() {
 	  }
       drawBoard();
 	  window.setTimeout(GameLoop,100);
-	  //window.requestAnimationFrame(GameLoop);			  
  }
  

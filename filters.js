@@ -25,8 +25,13 @@ function getPixel(imageData,x,y)
 function makeSplit(data,x,y,pixel)
 {
   var ratio=data.width/data.height;
-  
-  if (data.width-x<y*ratio) pixel.a=0;
+  var dist=data.width-x-y*ratio
+  if ((dist<3)||(x<3)||(y<3)) { 
+    pixel.r=0;
+	pixel.g=0;
+	pixel.b=0;  
+  }
+  if (dist<0) pixel.a=0;
   else pixel.a=255;
 }
 
