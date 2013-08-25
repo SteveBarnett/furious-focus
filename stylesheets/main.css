@@ -274,7 +274,7 @@ body {
   font-weight: bold;
 }
 
-.go {
+.go, .level-complete {
   color: #af2f02;
   font-weight: bold;
 }
