@@ -195,11 +195,13 @@ body {
 
 /* modules */
 
-.score {
-  margin: 0;
-  margin-right: 1em;
+.main-nav-item {
+  margin: 0 0 0 1em;
 }
 
+.restart {
+  margin-left: 1em;
+}
 
 .time {
   margin: 0;
@@ -255,15 +257,26 @@ body {
 
 /* level loading */
 
-.level-loading {
+.msg {
   top: 0;
   height: 100%;
   background: white;
   color: #dd5d16;
 }
 
+.level-loading-header {
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.high-score {
+  color: #af2f02;
+  font-weight: bold;
+}
+
 .go {
   color: #af2f02;
+  font-weight: bold;
 }
 
 /* filters */
