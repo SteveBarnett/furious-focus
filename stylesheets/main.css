@@ -236,6 +236,10 @@ body {
   color: #dd5d16;
 }
 
+.level-name {
+  margin-top: 0;
+}
+
 .level-link {
   display: block;
 }
