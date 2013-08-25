@@ -190,7 +190,6 @@ a {
 
 .main-nav {
   background: #3762bc;
-  font-size: 2em;
   color: white;
 }
 
@@ -216,6 +215,7 @@ a {
 
 .filter-radio-label {
   cursor: pointer;
+  border: solid 1px red;
 }
 
 .filter-radio-amount {
@@ -255,11 +255,23 @@ a {
 }
 
 .filter-side-primary .filter-radio-label {
-  padding-right: 15em;
+  padding-right: 7em;
+}
+
+@media (min-width: 30em) {
+  .filter-side-primary .filter-radio-label {
+    padding-right: 15em;
+  }
 }
 
 .filter-side-secondary .filter-radio-label {
-  padding-left: 15em;
+  padding-left: 7em;
+}
+
+@media (min-width: 30em) {
+  .filter-side-secondary .filter-radio-label {
+    padding-left: 15em;
+  }
 }
 
 .filter-side-primary {
@@ -282,11 +294,23 @@ a {
 }
 
 .filter-bottom-item:first-child .filter-radio-label {
-  padding-left: 5em;
+  padding-left: 1em;
+}
+
+@media (min-width: 30em) {
+  .filter-bottom-item:first-child .filter-radio-label {
+    padding-right: 9em;
+  }
 }
 
 .filter-bottom-item:last-child .filter-radio-label {
-  padding-right: 5em;
+  padding-right: 1em;
+}
+
+@media (min-width: 30em) {
+  .filter-bottom-item:last-child .filter-radio-label {
+    padding-right: 9em;
+  }
 }
 
 
