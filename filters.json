@@ -1,0 +1,24 @@
+{
+  "Easy":
+    [
+      "saturation",
+      "glitch",
+      "quality"
+    ],
+  "Medium":
+    [
+      [
+        "saturation", "glitch"
+      ],
+      [
+        "saturation", "quality"
+      ],
+      [
+        "glitch", "quality"
+      ]
+    ],
+    "Hard":
+    [
+      "saturation", "glitch", "quality"
+    ]
+}
