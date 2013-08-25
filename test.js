@@ -143,10 +143,12 @@ function play() {
  function GameLoop(timeStamp) {
 	  //Calculate our frametime
 	  var frameTime=timeStamp-lastTimeStamp;
+	  frameTime=100;
 	  if (lastTimeStamp==0) {
 	    frameTime=0;	  
 	    document.querySelector(".level-loading").classList.add("l-dn");
-		window.requestAnimationFrame(GameLoop);			  
+		//window.requestAnimationFrame(GameLoop);			  
+		window.setTimeout(GameLoop,100);
 		lastTimeStamp=1;
 		return;      
 	  }
@@ -169,6 +171,7 @@ function play() {
 		return;	  
 	  }
       drawBoard();
-	  window.requestAnimationFrame(GameLoop);			  
+	  window.setTimeout(GameLoop,100);
+	  //window.requestAnimationFrame(GameLoop);			  
  }
  
