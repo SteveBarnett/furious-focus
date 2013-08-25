@@ -194,20 +194,34 @@ a {
   bottom: 4em;
 }
 
-.filter-side-item {
-  margin: 2em 0;
+.filter-side-item .filter-radio-label {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.filter-side-primary .filter-radio-label {
+  padding-right: 15em;
+}
+
+.filter-side-secondary .filter-radio-label {
+  padding-left: 15em;
+}
+
+.filter-bottom-item .filter-radio-label {
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .filter-bottom-item {
-  margin: 0 1em;
+  /*margin: 0 1em;*/
 }
 
 .filter-side-primary {
-  left: 0;
+  left: 1em;
 }
 
 .filter-side-secondary {
-  right: 0;
+  right: 1em;
 }
 
 .filter-bottom {
@@ -218,10 +232,12 @@ a {
   display: none;
 }
 
-
 .filter-radio-label {
-  background: white;
   cursor: pointer;
+}
+
+.filter-radio-amount {
+  background: white;
   width: 1.3em;
   font-size: 1.5em;
   border-radius: 1em;
