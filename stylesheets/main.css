@@ -110,6 +110,7 @@ blue: #3762bc
 
 a {
   text-decoration: none;
+  color: #3762bc;
 }
 
 body {
@@ -221,16 +222,31 @@ body {
 
 /* level select */
 
+.level-select {
+  padding: 1em;
+}
+
 .level {
   margin-bottom: 1em;
 }
 
 .level-header {
   font-weight: normal;
-  margin-top: 0;
-  padding-top: 1em;
   border-bottom: solid 1px #dd5d16;
   color: #dd5d16;
+}
+
+.level-link {
+  display: block;
+}
+
+@media (min-width: 30em) {
+  .level {
+    display: inline-block;
+  }
+  .level-link {
+    padding: 0 1em;
+  }
 }
 
 /* filters */
