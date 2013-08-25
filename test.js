@@ -9,10 +9,12 @@ var timeBox;
 var scoreBox;
 var score;
 var controlOption;
+var llMessage="";
 
 function startSetUp()
 {
    document.querySelector(".level-loading").classList.remove("l-dn");	
+   document.querySelector(".level-complete").innerHTML=llMessage;	
    //select base image
    var sel=document.querySelectorAll('.sourcepic');
    var item=(Math.random()*sel.length)|0;
@@ -153,16 +155,20 @@ function play() {
 	  
 	  timeLeft-=frameTime;
 	  lastTimeStamp=timeStamp;	  
-	  drawBoard();
+	  llMessage="";
 	  if (checkBoardMatch()) {
 	    score+=1;
-	    startSetUp();
+		timeLeft+=2000;
+		llMessage="Complete!  +2 Seconds";
+		drawBoard();
+	    startSetUp();			  
 		return;
 	  }
 	  if (timeLeft<0) {
 	    showGameOver();
 		return;	  
-	  }	  
+	  }
+      drawBoard();
 	  window.requestAnimationFrame(GameLoop);			  
  }
  
