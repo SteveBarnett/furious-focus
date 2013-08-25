@@ -420,7 +420,7 @@ body {
 }
 
 .filter-bottom:after {
-  content: "saturation";
+  content: "desaturate";
   bottom: 3em;
   left: 18%;
 }
