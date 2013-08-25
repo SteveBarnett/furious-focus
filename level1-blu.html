@@ -1,0 +1,240 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="stylesheets/main.css" media="screen, handheld"/>
+  <link rel="stylesheet" href="stylesheets/normalize.css" media="screen, handheld"/>
+
+  <!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="stylesheets/ie.css" /> <![endif]-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- Typekit -->
+  <script type="text/javascript">
+    (function() {
+      if (window.innerWidth>548) { // Add && Modernizr.localstorage and cache font
+        var config = {
+          kitId: 'XXXXX',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      }
+    })();
+  </script>
+
+</head>
+
+<body class="focus" onload="play()">
+
+  <header role="banner" id="header" class="clearfix header">
+    <nav role="navigation" id="nav" class="main-nav l-fl">
+      <ul class="no-mp clearfix">
+        <li class="l-fl"><a href="index.html">&larr;</a></li>
+        <li class="l-fl"><a href="" class="restart">&darr;</a></li>
+      </ul>
+    </nav>
+    <p class="l-fr main-nav-item"><strong>Time</strong>: <span class="time" id="time"></span></p>
+    <p class="l-fr main-nav-item"><strong>Score</strong>: <span class="score" id="score"></span></p>
+  </header>
+
+
+  <main role="main" id="main" class="main">
+
+
+    <div class="photo l-pr l-w100">
+      <!-- .all-good when all slides are correct -->
+
+      <div class="level-loading l-pa l-tac l-w100 l-dn msg">
+
+          <div class="level-complete level-loading-header">
+          </div>
+
+          <div class="level-loading-header"><span class="time">10.0</span> seconds</div>
+          <p class="no-mp">to match as many as you can...</p>
+
+          <div class="go level-loading-header sl-dn">Go!</div>
+      </div>
+      <div class="level-over l-pa l-tac l-w100 l-dn msg">
+        <p>You matched <span class="score">8</span>.</p>
+        <h1 class="compliments">
+          <p class="compliment">Wow!</p>
+          <p class="compliment l-dn">Awesome!</p>
+          <p class="compliment l-dn">Yay!</p>
+          <p class="compliment l-dn">Huzzah!</p>
+          <p class="compliment l-dn">The Winningest!</p>
+          <p class="compliment l-dn">Hot damn!</p>
+          <p class="compliment l-dn">Yowzer!</p>
+          <p class="compliment l-dn">Nice!</p>
+          <p class="compliment l-dn">You rock!</p>
+          <p class="compliment l-dn">Great!</p>
+          <p class="compliment l-dn">Awwww yis!</p>
+          <p class="compliment l-dn">Naaaace, boet!</p>
+          <p class="compliment l-dn">Schweet, chaaaana!</p>
+          <p class="compliment l-dn">Lekker!</p>
+          <p class="compliment l-dn">Jolly good show!</p>
+          <p class="compliment l-dn">Brilliant!</p>
+        </h1>
+      </div>
+
+
+      <div class="filter filter-side filter-side-primary l-tac l-pa l-dn" id="filter1">
+        <ul class="no-mp no-bull">
+          <li class="filter-side-item">
+            <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-1" />
+            <label class="filter-radio-label l-ib" for="filter-glitch-1" onclick="setControls(1,0)">
+              <div class="filter-radio-amount">1</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-2" />
+            <label class="filter-radio-label l-ib" for="filter-glitch-2" onclick="setControls(1,0.25)">
+              <div class="filter-radio-amount">2</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-3" />
+            <label class="filter-radio-label l-ib" for="filter-glitch-3" onclick="setControls(1,0.5)">
+              <div class="filter-radio-amount">3</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-4" />
+            <label class="filter-radio-label l-ib" for="filter-glitch-4" onclick="setControls(1,0.75)">
+              <div class="filter-radio-amount">4</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-5" />
+            <label class="filter-radio-label l-ib" for="filter-glitch-5" onclick="setControls(1,1)">
+              <div class="filter-radio-amount">5</div>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+	  <canvas id="target" class="l-w100"></canvas>
+
+      <div class="filter filter-side filter-side-secondary l-tac l-pa l-dn" id="filter2">
+        <ul class="no-mp no-bull">
+          <li class="filter-side-item">
+            <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-1" />
+            <label class="filter-radio-label l-ib" for="filter-blur-1"  onclick="setControls(2,0)">
+              <div class="filter-radio-amount">1</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-2" />
+            <label class="filter-radio-label l-ib" for="filter-blur-2" onclick="setControls(2,0.25)">
+              <div class="filter-radio-amount">2</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-3" />
+            <label class="filter-radio-label l-ib" for="filter-blur-3" onclick="setControls(2,0.5)">
+              <div class="filter-radio-amount">3</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-4" />
+            <label class="filter-radio-label l-ib" for="filter-blur-4" onclick="setControls(2,0.75)">
+              <div class="filter-radio-amount">4</div>
+            </label>
+          </li>
+          <li class="filter-side-item">
+            <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-5" />
+            <label class="filter-radio-label l-ib" for="filter-blur-5" onclick="setControls(2,1)">
+              <div class="filter-radio-amount">5</div>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter filter-bottom l-cb l-tac l-pa l-w100 l-dn" id="filter0">
+        <ul class="no-mp no-bull">
+          <li class="l-ib filter-bottom-item">
+            <input type="radio" name="filter-saturation" class="filter-radio" id="filter-saturation-1" />
+            <label class="filter-radio-label l-ib" for="filter-saturation-1" onclick="setControls(0,0)">
+              <div class="filter-radio-amount">1</div>
+            </label>
+          </li>
+          <li class="l-ib filter-bottom-item">
+            <input type="radio" name="filter-saturation" class="filter-radio" id="filter-saturation-2" />
+            <label class="filter-radio-label l-ib" for="filter-saturation-2" onclick="setControls(0,0.25)">
+              <div class="filter-radio-amount">2</div>
+            </label>
+          </li>
+          <li class="l-ib filter-bottom-item">
+            <input type="radio" name="filter-saturation" class="filter-radio" id="filter-saturation-3" />
+            <label class="filter-radio-label l-ib" for="filter-saturation-3" onclick="setControls(0,0.5)">
+              <div class="filter-radio-amount">3</div>
+            </label>
+          </li>
+          <li class="l-ib filter-bottom-item">
+            <input type="radio" name="filter-saturation" class="filter-radio" id="filter-saturation-4" />
+            <label class="filter-radio-label l-ib" for="filter-saturation-4" onclick="setControls(0,0.75)">
+              <div class="filter-radio-amount">4</div>
+            </label>
+          </li>
+          <li class="l-ib filter-bottom-item">
+            <input type="radio" name="filter-saturation" class="filter-radio" id="filter-saturation-5" />
+            <label class="filter-radio-label l-ib" for="filter-saturation-5" onclick="setControls(0,1)">
+              <div class="filter-radio-amount">5</div>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+	<div id="leveldefarea" class="l-dn">
+		<h1>Level Set Up</h1>
+      <div class="controloption">--B</div>
+      <div class="bonus-time">2</div>
+    <h2>Resources</h2>
+  		<img class="sourcepic" src="arch1.jpg">
+  		<img class="sourcepic" src="arch2.jpg">
+  		<img class="sourcepic" src="arch3.jpg">
+  		<img class="sourcepic" src="arch4.jpg">
+		<h2>JS Resources</h2>
+		<script src="filters.js"></script>filters.js<br/>
+		<script src="test.js"></script>test.js<br/>
+	</div>
+
+
+  </main>
+
+  <footer role="contentinfo" id="footer" class="l-cb footer">
+    <p>Made by Andrew Higson-Smith of <a href="http://www.elementalsystems.co.za/">Elemental Systems</a> and Steve Barnett of <a href="http://naga.co.za/">Naga</a> for <a href="http://www.ludumdare.com/">Ludum Dare</a> 27: 10 Seconds.</p>
+  </footer>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-24142825-7', 'stevebarnett.github.io');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
