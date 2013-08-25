@@ -359,14 +359,77 @@ body {
   left: 0;
 }
 
+.filter:after {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+  text-shadow: 1px 1px 1px white;
+}
+
+@media (min-width: 30em) {
+  .filter:after {
+    font-size: 3em;
+  }
+}
+
+.filter-side-primary:after {
+  content: "noise";
+  bottom: 7em;
+  left: 1em;
+  -webkit-transform: rotate(-90deg);
+     -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+@media (min-width: 30em) {
+  .filter-side-primary:after {
+    bottom: 4.5em;
+    left: 0;
+  }
+}
+
 .filter-side-secondary {
   right: 0;
+}
+
+.filter-side-secondary:after {
+  content: "blur";
+  bottom: 7em;
+  right: 1em;
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media (min-width: 30em) {
+  .filter-side-secondary:after {
+    bottom: 4.5em;
+    right: 0;
+  }
 }
 
 /* filters - bottom */
 
 .filter-bottom {
   bottom: 0;
+}
+
+.filter-bottom:after {
+  content: "saturation";
+  bottom: 3em;
+  left: 18%;
+}
+
+@media (min-width: 30em) {
+  .filter-bottom:after {
+    bottom: 2em;
+    left: 15%;
+  }
 }
 
 .filter-bottom-item .filter-radio-label {
@@ -386,6 +449,7 @@ body {
   }
   .filter-bottom-item .filter-radio-label  {
     font-size: 1.5em;
+    padding-top: 3em;
   }
 }
 
