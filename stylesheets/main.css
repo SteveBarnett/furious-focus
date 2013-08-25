@@ -129,6 +129,17 @@ body {
   list-style: none;
 }
 
+/* header */
+
+.header {
+  padding: 0.25em 0.5em;
+}
+
+.main-header {
+  font-weight: normal;
+  margin: 0;
+}
+
 /* layout */
 
 .focus {
@@ -183,10 +194,6 @@ body {
 
 /* modules */
 
-.header {
-  padding: 0.25em 0.5em;
-}
-
 .score {
   margin: 0;
   margin-right: 1em;
@@ -210,6 +217,20 @@ body {
   color: white;
   font-size: 30em;
   font-family: serif;
+}
+
+/* level select */
+
+.level {
+  margin-bottom: 1em;
+}
+
+.level-header {
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 1em;
+  border-bottom: solid 1px #dd5d16;
+  color: #dd5d16;
 }
 
 /* filters */
