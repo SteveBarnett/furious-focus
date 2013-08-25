@@ -160,6 +160,10 @@ a {
   width: 100%;
 }
 
+.l-dn {
+  display: none;
+}
+
 
 /* modules */
 
@@ -187,11 +191,15 @@ a {
 }
 
 .filter-side {
-  bottom: 2em;
+  bottom: 4em;
 }
 
 .filter-side-item {
-  margin: 0.25em 0;
+  margin: 2em 0;
+}
+
+.filter-bottom-item {
+  margin: 0 1em;
 }
 
 .filter-side-primary {
@@ -203,7 +211,7 @@ a {
 }
 
 .filter-bottom {
-  bottom: 0.25em;
+  bottom: 1em;
 }
 
 .filter-radio {
@@ -212,7 +220,6 @@ a {
 
 
 .filter-radio-label {
-  /*margin: 0 0.5em;*/
   background: white;
   cursor: pointer;
   width: 1.3em;
