@@ -199,8 +199,21 @@ body {
   margin: 0 0 0 1em;
 }
 
-.restart {
+.main-nav-link {
+  padding: 0 1em;
+}
+
+.main-nav-link-menu {
+  background: white;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.main-nav-link-restart {
   margin-left: 1em;
+  background: white;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
 }
 
 .time {
@@ -209,10 +222,6 @@ body {
 
 .main-nav {
   background: #3762bc;
-  color: white;
-}
-
-.main-nav a {
   color: white;
 }
 
