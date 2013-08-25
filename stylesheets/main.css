@@ -301,11 +301,11 @@ body {
 
 @media (min-width: 30em) {
   .filter-side-primary .filter-radio-label {
-    padding-right: 15em;
+    font-size: 1.5em;
   }
 
   .filter-side-secondary .filter-radio-label {
-    padding-left: 15em;
+    font-size: 1.5em;
   }
 }
 
@@ -333,13 +333,13 @@ body {
 
 @media (min-width: 30em) {
   .filter-bottom-item:first-child .filter-radio-label {
-    padding-left: 9em;
+    padding-left: 3em;
   }
   .filter-bottom-item:last-child .filter-radio-label {
-    padding-right: 9em;
+    padding-right: 3em;
   }
   .filter-bottom-item .filter-radio-label  {
-    padding-top: 6em;
+    font-size: 1.5em;
   }
 }
 
