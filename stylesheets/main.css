@@ -164,7 +164,7 @@ a {
 /* modules */
 
 .main-nav {
-  background: #0555AA;
+  background: #3762bc;
   padding: 0.25em 0.5em;
   font-size: 2em;
   color: white;
@@ -182,46 +182,57 @@ a {
 
 /* filters */
 
+.filter {
+  font-size: 0.75em;
+}
+
 .filter-side-item {
-  margin: 1em 0;
+  margin: 0.25em 0;
 }
 
 .filter-side-primary {
   left: 0;
-  top: 25%;
+  bottom: 0;
 }
 
 .filter-side-secondary {
   right: 0;
-  top: 25%;
+  bottom: 0;
 }
 
 .filter-bottom {
-  bottom: 0.5em;
+  bottom: 0.25em;
 }
 
 .filter-radio {
   display: none;
 }
 
-.filter-radio + .filter-radio-label {
-  background: red;
+
+.filter-radio-label {
+  /*margin: 0 0.5em;*/
+  background: white;
+  cursor: pointer;
+  width: 1.3em;
+  font-size: 1.5em;
+  border-radius: 1em;
+  border: solid 2px black;
+  opacity: 0.6;
 }
 
 .filter-radio:checked + .filter-radio-label {
-  background: green;
+  color: #dd5d16;
+  border-color: #0777fb;
+  opacity: 0.9;
 }
 
-.filter-radio-label {
-  margin: 0 0.5em;
-  cursor: pointer;
-  width: 2em;
-  font-size: 1.5em;
+.all-good .filter-radio-label {
+  opacity: 0;
 }
 
-
-
-
+.all-good .filter-radio:checked + .filter-radio-label {
+  opacity: 1;
+}
 
 
 

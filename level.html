@@ -45,7 +45,7 @@
     <nav role="navigation" id="nav" class="main-nav">
       <ul class="no-mp clearfix">
         <li class="l-fl"><a href="#">&larr;</a></li>
-        <li class="l-fr">10 seconds</li>
+        <li class="l-fr" id="time">9.3</li>
       </ul>
     </nav>
   </header>
@@ -55,15 +55,16 @@
 
 
     <div class="photo l-pr l-w100">
+      <!-- .all-good when all slides are correct -->
 
-      <div class="filter-side filter-side-primary l-tac l-pa">
+      <div class="filter filter-side filter-side-primary l-tac l-pa">
         <ul class="no-mp no-bull">
           <li class="filter-side-item">
             <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-1" />
             <label class="filter-radio-label l-ib" for="filter-glitch-1">1</label>
           </li>
           <li class="filter-side-item">
-            <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-2" />
+            <input type="radio" name="filter-glitch" class="filter-radio" id="filter-glitch-2" checked="checked" />
             <label class="filter-radio-label l-ib" for="filter-glitch-2">2</label>
           </li>
           <li class="filter-side-item">
@@ -81,9 +82,9 @@
         </ul>
       </div>
 
-      <img src="http://placeimg.com/600/600/people" alt="Le Photo" class="l-w100">
+      <img src="http://placeimg.com/60/60/people" alt="Le Photo" class="l-w100">
 
-      <div class="filter-side filter-side-secondary l-tac l-pa">
+      <div class="filter filter-side filter-side-secondary l-tac l-pa">
         <ul class="no-mp no-bull">
           <li class="filter-side-item">
             <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-1" />
@@ -98,7 +99,7 @@
             <label class="filter-radio-label l-ib" for="filter-blur-3">3</label>
           </li>
           <li class="filter-side-item">
-            <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-4" />
+            <input type="radio" name="filter-blur" class="filter-radio" id="filter-blur-4" checked="checked" />
             <label class="filter-radio-label l-ib" for="filter-blur-4">4</label>
           </li>
           <li class="filter-side-item">
@@ -108,10 +109,10 @@
         </ul>
       </div>
 
-      <div class="filter-bottom l-cb l-tac l-pa l-w100">
+      <div class="filter filter-bottom l-cb l-tac l-pa l-w100">
         <ul class="no-mp no-bull">
           <li class="l-ib">
-            <input type="radio" name="filter-saturation" class="filter-radio" id="filter-saturation-1" />
+            <input type="radio" name="filter-saturation" class="filter-radio" id="filter-saturation-1" checked="checked" />
             <label class="filter-radio-label l-ib" for="filter-saturation-1">1</label>
           </li>
           <li class="l-ib">
