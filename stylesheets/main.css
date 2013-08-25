@@ -106,8 +106,16 @@ lightblue: #0777fb
 blue: #3762bc
 */
 
+/* base */
+
 a {
   text-decoration: none;
+}
+
+body {
+  font-family: "freight-sans-pro",sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* utils */
