@@ -186,18 +186,20 @@ a {
   font-size: 0.75em;
 }
 
+.filter-side {
+  bottom: 2em;
+}
+
 .filter-side-item {
   margin: 0.25em 0;
 }
 
 .filter-side-primary {
   left: 0;
-  bottom: 0;
 }
 
 .filter-side-secondary {
   right: 0;
-  bottom: 0;
 }
 
 .filter-bottom {
