@@ -165,6 +165,7 @@ a {
 
 .l-w100 {
   width: 100%;
+  height: auto;
 }
 
 .l-dn {
@@ -249,71 +250,77 @@ a {
   bottom: 4em;
 }
 
+@media (min-width: 30em) {
+  .filter-side {
+    bottom: 10em;
+  }
+}
+
 .filter-side-item .filter-radio-label {
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
 .filter-side-primary .filter-radio-label {
-  padding-right: 7em;
+  padding-right: 9em;
+  padding-left: 1em;
+}
+
+.filter-side-secondary .filter-radio-label {
+  padding-left: 9em;
+  padding-right: 1em;
 }
 
 @media (min-width: 30em) {
   .filter-side-primary .filter-radio-label {
     padding-right: 15em;
   }
-}
 
-.filter-side-secondary .filter-radio-label {
-  padding-left: 7em;
-}
-
-@media (min-width: 30em) {
   .filter-side-secondary .filter-radio-label {
     padding-left: 15em;
   }
 }
 
 .filter-side-primary {
-  left: 1em;
+  left: 0;
 }
 
 .filter-side-secondary {
-  right: 1em;
+  right: 0;
 }
 
 /* filters - bottom */
 
 .filter-bottom {
-  bottom: 1em;
+  bottom: 0;
 }
 
 .filter-bottom-item .filter-radio-label {
   padding-right: 1em;
+  padding-bottom: 1em;
   padding-left: 1em;
 }
 
-.filter-bottom-item:first-child .filter-radio-label {
-  padding-left: 1em;
-}
+
 
 @media (min-width: 30em) {
   .filter-bottom-item:first-child .filter-radio-label {
-    padding-right: 9em;
+    padding-left: 9em;
   }
-}
-
-.filter-bottom-item:last-child .filter-radio-label {
-  padding-right: 1em;
-}
-
-@media (min-width: 30em) {
   .filter-bottom-item:last-child .filter-radio-label {
     padding-right: 9em;
   }
+  .filter-bottom-item .filter-radio-label  {
+    padding-top: 6em;
+  }
 }
 
+/* footer */
 
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
 
 
 /* ==========================================================================
