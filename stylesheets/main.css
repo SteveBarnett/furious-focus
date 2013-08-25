@@ -126,6 +126,13 @@ a {
 .focus {
   max-width: 35em;
   margin: 0 auto;
+  background: #3762bc;
+  color: white;
+}
+
+.main {
+  background: white;
+  color: black;
 }
 
 .l-ib {
@@ -167,9 +174,22 @@ a {
 
 /* modules */
 
+.header {
+  padding: 0.25em 0.5em;
+}
+
+.score {
+  margin: 0;
+  margin-right: 1em;
+}
+
+
+.time {
+  margin: 0;
+}
+
 .main-nav {
   background: #3762bc;
-  padding: 0.25em 0.5em;
   font-size: 2em;
   color: white;
 }
@@ -190,44 +210,6 @@ a {
   font-size: 0.75em;
 }
 
-.filter-side {
-  bottom: 4em;
-}
-
-.filter-side-item .filter-radio-label {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.filter-side-primary .filter-radio-label {
-  padding-right: 15em;
-}
-
-.filter-side-secondary .filter-radio-label {
-  padding-left: 15em;
-}
-
-.filter-bottom-item .filter-radio-label {
-  padding-right: 1em;
-  padding-left: 1em;
-}
-
-.filter-bottom-item {
-  /*margin: 0 1em;*/
-}
-
-.filter-side-primary {
-  left: 1em;
-}
-
-.filter-side-secondary {
-  right: 1em;
-}
-
-.filter-bottom {
-  bottom: 1em;
-}
-
 .filter-radio {
   display: none;
 }
@@ -245,9 +227,10 @@ a {
   opacity: 0.6;
 }
 
-.filter-radio:checked + .filter-radio-label {
-  color: #dd5d16;
-  border-color: #0777fb;
+.filter-radio:checked + .filter-radio-label .filter-radio-amount {
+  background-color: #dd5d16;
+  color: white;
+  border-color: #af2f02;
   opacity: 0.9;
 }
 
@@ -259,6 +242,52 @@ a {
   opacity: 1;
 }
 
+
+/* filters - side */
+
+.filter-side {
+  bottom: 4em;
+}
+
+.filter-side-item .filter-radio-label {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.filter-side-primary .filter-radio-label {
+  padding-right: 15em;
+}
+
+.filter-side-secondary .filter-radio-label {
+  padding-left: 15em;
+}
+
+.filter-side-primary {
+  left: 1em;
+}
+
+.filter-side-secondary {
+  right: 1em;
+}
+
+/* filters - bottom */
+
+.filter-bottom {
+  bottom: 1em;
+}
+
+.filter-bottom-item .filter-radio-label {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.filter-bottom-item:first-child .filter-radio-label {
+  padding-left: 5em;
+}
+
+.filter-bottom-item:last-child .filter-radio-label {
+  padding-right: 5em;
+}
 
 
 
