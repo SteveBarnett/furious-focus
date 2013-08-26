@@ -25,9 +25,7 @@ function startSetUp()
    controlOption=sel[item].innerHTML;
    
    
-   gameCanvas = document.getElementById('target');
-   gameCanvas.height=gameCanvas.width;
-
+   
    timeBox = document.querySelectorAll('.time');
    scoreBox = document.querySelectorAll('.score');
    
@@ -148,6 +146,8 @@ function drawBoard()
  
  
 function play() {
+   gameCanvas = document.getElementById('target');
+   gameCanvas.height=gameCanvas.width;
    score=0;
    timeLeft=10000;  
    startSetUp();

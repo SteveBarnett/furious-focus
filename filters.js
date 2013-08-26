@@ -120,7 +120,7 @@ function blur_control()
   var finalCanvas=transformImage(original,
     function(data,x,y,pixel) {
 	  var count=1;
-	  for (var i=0;i<10;i+=2) {
+	  for (var i=0;i<10;i+=1) {
 	    if (x+i>=data.width) break;
 		if (y+i>=data.height) break;
 		
@@ -141,7 +141,7 @@ function blur_control()
   
 	
   this.draw=function() {
-    drawContext.globalAlpha=this.level;
+    drawContext.globalAlpha=this.level*.6;
 	drawContext.drawImage(finalCanvas,0,0,original.width,original.height,0,0,gameCanvas.width,gameCanvas.height);	
   }
 }
